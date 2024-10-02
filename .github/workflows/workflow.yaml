@@ -1,0 +1,25 @@
+name: Continuous Integration
+
+on: [pull_request, push] # Eventos que irão disparar o workflow
+
+jobs: # Jobs a serem executados
+  continuous-integration:
+    run-on: ubuntu-latest # Maquina virtual a ser utilizada
+
+    steps:
+      - uses: actions/checkout@v3 # Ação para clonar o repositório
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 22.x # O x serve para ignorar as minor versions
+
+      - name: run Install, build and test
+        run: |
+        npm install
+        npm run build
+        npm run test
+
+        
+
+      
