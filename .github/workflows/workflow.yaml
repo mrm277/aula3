@@ -4,7 +4,7 @@ on: [pull_request, push] # Eventos que irão disparar o workflow
 
 jobs: # Jobs a serem executados
   continuous-integration:
-    run-on: ubuntu-latest # Maquina virtual a ser utilizada
+    runs-on: ubuntu-latest # Maquina virtual a ser utilizada
 
     steps:
       - uses: actions/checkout@v3 # Ação para clonar o repositório
@@ -16,10 +16,6 @@ jobs: # Jobs a serem executados
 
       - name: run Install, build and test
         run: |
-        npm install
-        npm run build
-        npm run test
-
-        
-
-      
+          npm install
+          npm run build
+          npm run test
