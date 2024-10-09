@@ -31,7 +31,7 @@ jobs: # Define os jobs a serem executados
 
       - name: Run Build
         if: github.ref == 'refs/heads/master' && success()
-        run: npm run build # Comando para executar o build
+        run: npm run build 
 
       - name: Deploy
         if: github.ref == 'refs/heads/master' && success()
