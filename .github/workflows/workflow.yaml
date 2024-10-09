@@ -34,6 +34,7 @@ jobs: # Define os jobs a serem executados
         run: npm run build # Comando para executar o build
 
       - name: Deploy
+        if: github.ref == 'refs/heads/master' && success()
         run: npx netlify-cli deploy
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
