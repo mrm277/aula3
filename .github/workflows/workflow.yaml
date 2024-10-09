@@ -34,4 +34,4 @@ jobs: # Define os jobs a serem executados
         run: npm run build # Comando para executar o build
 
       - name: Deploy
-        npx netlify-cli deploy --site maria-monteiro-tdw-mctw.netlify.app -- auth ${{ secrets.NETLIFY_AUTH_TOKEN}} --prod 
+        run: npx netlify-cli deploy --site maria-monteiro-tdw-mctw.netlify.app --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --prod # Comando para fazer o deploy do projeto
