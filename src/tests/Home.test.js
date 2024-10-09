@@ -6,7 +6,7 @@ const Home = require('../pages/Home.js');
 test('renderiza o MyComponent', () => {
   try {
     render(React.createElement(Home));
-    const element = screen.getByText(/This is a simple home page./i);
+    const element = screen.getByText(/Este é o site que a Maria fez/i);
     expect(element).toBeInTheDocument();
   } catch (error) {
     console.error('Erro ao renderizar o componente ou encontrar o texto:', error);
