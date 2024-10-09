@@ -1,15 +1,18 @@
-const { render, screen } = require('@testing-library/react');
-require('@testing-library/jest-dom'); 
-const React = require('react');
-const Home = require('../pages/Home.js');
+const { render, screen } = require("@testing-library/react");
+require("@testing-library/jest-dom");
+const React = require("react");
+const Home = require("../pages/Home.js");
 
-test('renderiza o MyComponent', () => {
+test("renderiza o MyComponent", () => {
   try {
     render(React.createElement(Home));
     const element = screen.getByText(/Este é o site que a Maria fez/i);
     expect(element).toBeInTheDocument();
   } catch (error) {
-    console.error('Erro ao renderizar o componente ou encontrar o texto:', error);
+    console.error(
+      "Erro ao renderizar o componente ou encontrar o texto:",
+      error,
+    );
     throw error; // Re-throw the error to ensure the test fails
   }
 });
