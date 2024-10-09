@@ -6,6 +6,10 @@ jobs: # Jobs a serem executados
   continuous-integration:
     runs-on: ubuntu-latest # Maquina virtual a ser utilizada
 
+     strategy:
+      matrix:
+        branch: [main, master] # Correr em paralelo para as branches main e master
+
     steps:
       - uses: actions/checkout@v3 # Ação para clonar o repositório
 
