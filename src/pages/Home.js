@@ -4,8 +4,8 @@ const Home = () => {
   return React.createElement(
     'div',
     null,
-    React.createElement('h1', null, 'Welcome to the Home Page'),
-    React.createElement('p', null, 'This is a simple home page.')
+    React.createElement('h1', null, 'Olá, bem-vindo ao meu site!'),
+    React.createElement('p', null, 'Este é o site que a Maria fez')
   );
 };
 
