@@ -32,3 +32,6 @@ jobs: # Define os jobs a serem executados
       - name: Run Build
         if: github.ref == 'refs/heads/master' && success()
         run: npm run build # Comando para executar o build
+
+      - name: Deploy
+        npx netlify-cli deploy --site maria-monteiro-tdw-mctw.netlify.app -- auth ${{ secrets.NETLIFY_AUTH_TOKEN}} --prod 
